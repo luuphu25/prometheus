@@ -1,0 +1,18 @@
+{
+	"ulid": "01D4G2FNC1KAX6Q6PX96CET30K",
+	"minTime": 1550822400000,
+	"maxTime": 1550829600000,
+	"stats": {
+		"numSamples": 10624,
+		"numSeries": 16,
+		"numChunks": 96,
+		"numBytes": 56142
+	},
+	"compaction": {
+		"level": 1,
+		"sources": [
+			"01D4G2FNC1KAX6Q6PX96CET30K"
+		]
+	},
+	"version": 1
+}

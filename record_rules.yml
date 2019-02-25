@@ -1,0 +1,13 @@
+groups:
+  - name: cpu_usage
+    rules: 
+    - record: cpu_usage
+      expr: 100 - (avg by (instance) (irate(node_cpu_seconds_total{job="node",mode="idle"}[5m])) * 100)
+  - name: idle_cpu
+    rules:
+    - record: idle_cpu_rate
+      expr: irate(node_cpu_seconds_total{mode="idle"}[2m])
+  - name: disk_free
+    rules:
+    - record: diskFree
+      expr: (node_filesystem_free_bytes{device="/dev/sda1"} / node_filesystem_size_bytes{device="/dev/sda1"})
